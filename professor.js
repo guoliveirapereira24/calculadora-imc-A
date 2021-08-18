@@ -1,7 +1,7 @@
 function calcularIMC(peso, altura){
-    return (peso / (altura ** 2)).toFixed
+    return (peso / (altura ** 2)).toFixed()
 }
-function classificacao(imc){
+function classificar(imc){
 
     let classificacao
     if (imc < 18,5){
@@ -35,19 +35,23 @@ function camposValidos() {
 function exibirResultado(){
     const resultado = document.getElementById( 'resultado')
     const nome = document.getElementById("nome").value
-    const peso = parseFloat (document.getElementById('peso').value).replace(',', ".")
-    const altura = parseFloat (document.getElementById('altura').value).replace(',', ".")
+    const peso = parseFloat (document.getElementById('peso').value.replace(',', "."))
+    const altura = parseFloat (document.getElementById('altura').value.replace(',', "."))
 
     if(camposValidos()){
         const imc = calcularIMC(peso, altura)
         const classificacao = classificar(imc)
+
+        resultado.textContent = `${nome} seu IMC é ${imc} e você está ${classificacao}`
+    }else{
+        resultado.textContent = 'Preencha todos os campos'
     }
 
     const imc = calcularIMC(peso, altura)
     const classificacao = classificar(imc)
 
 
-    resultado.textContent = `${nome} seu imc é ${imc.replace} e você está ${classificacao}`
+   
     
 }
 
