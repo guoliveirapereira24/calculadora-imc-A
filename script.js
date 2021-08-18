@@ -1,9 +1,10 @@
 const altura = document.getElementById("altura")
 const peso = document.getElementById("peso")
+const calcular = document.getElementById("calcular")
 const resultado = document.getElementById("resultado")
 
 function imc() {
-    resultados.value = (parseFloat(altura.value) * parseFloat(peso.value)) /2
-    formulario.classList.add("red")    
+     resultado.value = (parseFloat(altura.value) * parseFloat(peso.value)) /2
+
 }
-resultado.addEventListener("click", imc)
+calcular.addEventListener("click", imc)

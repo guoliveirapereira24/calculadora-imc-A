@@ -117,7 +117,7 @@ section {
     border-radius: 5px;
 }
 
-.calculadora .resultados{
+.calculadora .resultado{
     height: 100px;
     background-color: var(--cor-destaque);
     border-radius: 5px;
